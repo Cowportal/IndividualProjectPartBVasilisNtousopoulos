@@ -1,0 +1,202 @@
+//SqlConnection connection;
+            //SqlCommand command;
+            //SqlCommand command2;
+            //SqlCommand command3;
+            //SqlCommand command4;
+            //SqlCommand command5;
+            //SqlCommand command6;
+            //SqlCommand command7;
+            //SqlCommand command8;
+            //SqlCommand command9;
+            //SqlDataAdapter adapter = new SqlDataAdapter();
+            //DataSet ds1 = new DataSet();
+            //DataSet ds2 = new DataSet();
+            //DataSet ds3 = new DataSet();
+            //DataSet ds4 = new DataSet();
+            //DataSet ds5 = new DataSet();
+            //DataSet ds6 = new DataSet();
+            //DataSet ds7 = new DataSet();
+            //DataSet ds8 = new DataSet();
+            //DataSet ds9 = new DataSet();
+
+
+
+
+            //string connectionString = "Server=.;Database=Vasilis_Ntousopoulos_Individual_PartB;Trusted_Connection=True";
+            //string selectStudents = "SELECT * FROM Students;";
+            //string selectTrainers = "SELECT * FROM Trainers;";
+            //string selectCourses = "SELECT title +'_'+ Subjects.Stream as Course,type, startDate, endDate FROM Courses" +
+            //                                           " INNER JOIN CoursesSubjects on Courses.ID = CoursesSubjects.CourseID" +
+            //                                           " INNER JOIN Subjects on Subjects.ID = CoursesSubjects.SubjectID" +
+            //                                           " ORDER BY Courses.ID;";
+            //string selectAssignments = "SELECT * FROM Assignments;";
+            //string allStudentsPerCourse = "SELECT Courses.ID AS [Course ID], Courses.title, Courses.type, Students.ID AS [Student ID], firstName, lastName  FROM Students" +
+            //                                           " INNER JOIN StudentsCourses on Students.ID = StudentsCourses.StudentID" +
+            //                                           " INNER JOIN Courses on Courses.ID = StudentsCourses.CourseID" +
+            //                                           " ORDER BY Courses.ID;";
+            //string allTrainersPerCourse = "SELECT Courses.ID AS [Course ID], Courses.title, Courses.type, Trainers.ID AS [Trainer ID], firstName, lastName  FROM Trainers" +
+            //                                           " INNER JOIN TrainersCourses ON Trainers.ID = TrainersCourses.TrainerID" +
+            //                                           " INNER JOIN Courses ON Courses.ID = TrainersCourses.CourseID;";
+            //string allAssignmentsPerCourse = "SELECT Courses.ID AS [Course ID] , Courses.Title, Courses.type, Assignments.ID as [Assignment ID], Assignments.title FROM Assignments" +
+            //                                           " INNER JOIN AssignmentsCourses on Assignments.ID = AssignmentsCourses.AssignmentID" +
+            //                                           " INNER JOIN Courses on Courses.ID = AssignmentsCourses.CourseID" +
+            //                                           " order by Courses.ID;";
+            //string allAssignmentsPerCoursePerStudent = "SELECT Assignments.ID AS [Assignment ID], Assignments.title AS [Assignment Title], Students.ID AS [Student ID]," +
+            //                                           " firstName AS [Student First Name], lastName AS [Student Last Name], Courses.ID AS [Course ID], Courses.title AS [Course Title], Courses.type" +
+            //                                           " AS [Course Title] from students" +
+            //                                           " INNER JOIN StudentsCourses on Students.ID = StudentsCourses.StudentID" +
+            //                                           " INNER JOIN Courses ON Courses.ID = StudentsCourses.CourseID" +
+            //                                           " INNER JOIN AssignmentsCourses ON Courses.ID = AssignmentsCourses.CourseID" +
+            //                                           " INNER JOIN Assignments ON Assignments.ID = AssignmentsCourses.AssignmentID" +
+            //                                           " ORDER BY Assignments.ID,Students.ID, Courses.ID;";
+            //string studentsWithMoreThanOneCourse = "SELECT StudentID, firstName, lastNAme FROM StudentsCourses" +
+            //                                           " INNER JOIN Students ON Students.ID = StudentsCourses.StudentID" +
+            //                                           " GROUP BY studentID, firstName, lastNAme HAVING COUNT(COURSEID) > 1;";
+
+
+            //connection = new SqlConnection(connectionString);
+
+
+            //try
+            //{
+            //    connection.Open();
+            //    command = new SqlCommand(selectStudents, connection);
+            //    adapter.SelectCommand = command;
+            //    adapter.Fill(ds1);
+            //    adapter.Dispose();
+            //    command.Dispose();
+            //    command2 = new SqlCommand(selectTrainers, connection);
+            //    adapter.SelectCommand = command2;
+            //    adapter.Fill(ds2);
+            //    adapter.Dispose();
+            //    command.Dispose();
+            //    command3 = new SqlCommand(selectCourses, connection);
+            //    adapter.SelectCommand = command3;
+            //    adapter.Fill(ds3);
+            //    adapter.Dispose();
+            //    command.Dispose();
+            //    command4 = new SqlCommand(selectAssignments, connection);
+            //    adapter.SelectCommand = command4;
+            //    adapter.Fill(ds4);
+            //    adapter.Dispose();
+            //    command.Dispose();
+            //    command5 = new SqlCommand(allStudentsPerCourse, connection);
+            //    adapter.SelectCommand = command5;
+            //    adapter.Fill(ds5);
+            //    adapter.Dispose();
+            //    command.Dispose();
+            //    command6 = new SqlCommand(allTrainersPerCourse, connection);
+            //    adapter.SelectCommand = command6;
+            //    adapter.Fill(ds6);
+            //    adapter.Dispose();
+            //    command.Dispose();
+            //    command7 = new SqlCommand(allAssignmentsPerCourse, connection);
+            //    adapter.SelectCommand = command7;
+            //    adapter.Fill(ds7);
+            //    adapter.Dispose();
+            //    command.Dispose();
+            //    command8 = new SqlCommand(allAssignmentsPerCoursePerStudent, connection);
+            //    adapter.SelectCommand = command8;
+            //    adapter.Fill(ds8);
+            //    adapter.Dispose();
+            //    command.Dispose();
+            //    command9 = new SqlCommand(studentsWithMoreThanOneCourse, connection);
+            //    adapter.SelectCommand = command9;
+            //    adapter.Fill(ds9);
+            //    adapter.Dispose();
+            //    command.Dispose();
+            //    connection.Close();
+
+
+
+            //    for (int i = 0; i < ds1.Tables[0].Rows.Count; i++)
+            //    {
+            //        Console.WriteLine($"\nStudent number {i + 1} \n");
+            //        for (int j = 0; j < ds1.Tables[0].Columns.Count; j++)
+            //        {
+            //            Console.WriteLine($"{ds1.Tables[0].Columns[j]} -- {ds1.Tables[0].Rows[i].ItemArray[j]}\n");
+            //        }
+            //    }
+            //    for (int i = 0; i < ds2.Tables[0].Rows.Count; i++)
+            //    {
+            //        Console.WriteLine($"\nTrainer number {i + 1} \n");
+            //        for (int j = 0; j < ds2.Tables[0].Columns.Count; j++)
+            //        {
+            //            Console.WriteLine($"{ds2.Tables[0].Columns[j]} -- {ds2.Tables[0].Rows[i].ItemArray[j]}\n");
+            //        }
+            //    }
+            //    for (int i = 0; i < ds3.Tables[0].Rows.Count; i++)
+            //    {
+            //        Console.WriteLine($"\nCourse number {i + 1} \n");
+            //        for (int j = 0; j < ds3.Tables[0].Columns.Count; j++)
+            //        {
+            //            Console.WriteLine($"{ds3.Tables[0].Columns[j]} -- {ds3.Tables[0].Rows[i].ItemArray[j]}\n");
+            //        }
+            //    }
+            //    for (int i = 0; i < ds4.Tables[0].Rows.Count; i++)
+            //    {
+            //        Console.WriteLine($"\nAssignment number {i + 1} \n");
+            //        for (int j = 0; j < ds4.Tables[0].Columns.Count; j++)
+            //        {
+            //            Console.WriteLine($"{ds4.Tables[0].Columns[j]} -- {ds4.Tables[0].Rows[i].ItemArray[j]}\n");
+            //        }
+            //    }
+            //    for (int i = 0; i < ds5.Tables[0].Rows.Count; i++)
+            //    {
+            //        Console.WriteLine($"\nStudent in Course number {i + 1} \n");
+            //        for (int j = 0; j < ds5.Tables[0].Columns.Count; j++)
+            //        {
+            //            Console.WriteLine($"{ds5.Tables[0].Columns[j]} -- {ds5.Tables[0].Rows[i].ItemArray[j]}\n");
+            //        }
+            //    }
+            //    for (int i = 0; i < ds5.Tables[0].Rows.Count; i++)
+            //    {
+            //        Console.WriteLine($"\nStudent in Course number {i + 1} \n");
+            //        for (int j = 0; j < ds5.Tables[0].Columns.Count; j++)
+            //        {
+            //            Console.WriteLine($"{ds5.Tables[0].Columns[j]} -- {ds5.Tables[0].Rows[i].ItemArray[j]}\n");
+            //        }
+            //    }
+            //    for (int i = 0; i < ds6.Tables[0].Rows.Count; i++)
+            //    {
+            //        Console.WriteLine($"\nTrainer in Course number {i + 1} \n");
+            //        for (int j = 0; j < ds6.Tables[0].Columns.Count; j++)
+            //        {
+            //            Console.WriteLine($"{ds6.Tables[0].Columns[j]} -- {ds6.Tables[0].Rows[i].ItemArray[j]}\n");
+            //        }
+            //    }
+            //    for (int i = 0; i < ds7.Tables[0].Rows.Count; i++)
+            //    {
+            //        Console.WriteLine($"\nAssignment in Course number {i + 1} \n");
+            //        for (int j = 0; j < ds7.Tables[0].Columns.Count; j++)
+            //        {
+            //            Console.WriteLine($"{ds7.Tables[0].Columns[j]} -- {ds7.Tables[0].Rows[i].ItemArray[j]}\n");
+            //        }
+            //    }
+            //    for (int i = 0; i < ds8.Tables[0].Rows.Count; i++)
+            //    {
+            //        Console.WriteLine($"\nAssignment per Course per Student {i + 1} \n");
+            //        for (int j = 0; j < ds8.Tables[0].Columns.Count; j++)
+            //        {
+            //            Console.WriteLine($"{ds8.Tables[0].Columns[j]} -- {ds8.Tables[0].Rows[i].ItemArray[j]}\n");
+            //        }
+            //    }
+            //    for (int i = 0; i < ds9.Tables[0].Rows.Count; i++)
+            //    {
+            //        Console.WriteLine($"\nStudents with more than one Course {i + 1} \n");
+            //        for (int j = 0; j < ds9.Tables[0].Columns.Count; j++)
+            //        {
+            //            Console.WriteLine($"{ds9.Tables[0].Columns[j]} -- {ds9.Tables[0].Rows[i].ItemArray[j]}\n");
+            //        }
+            //    }
+
+
+
+
+
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine(ex.Message);
+
+            //}
